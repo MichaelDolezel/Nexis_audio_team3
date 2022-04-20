@@ -2,11 +2,11 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Apr  7 12:41:58 2022
-# Process ID: 8152
+# Start of session at: Wed Apr 20 19:09:15 2022
+# Process ID: 7552
 # Current directory: C:/PC/VUT/BPC-DE1/projekt/Nexys_audio_team3/Project/Nexys_audio_team3/Nexys_audio_team3.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/PC/VUT/BPC-DE1/projekt/Nexys_audio_team3/Project/Nexys_audio_team3/Nexys_audio_team3.sim/sim_1/behav/xsim/xsim.dir/tb_clock_enable_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/PC/VUT/BPC-DE1/projekt/Nexys_audio_team3/Project/Nexys_audio_team3/Nexys_audio_team3.sim/sim_1/behav/xsim/xsim.dir/tb_cnt_up_down_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/PC/VUT/BPC-DE1/projekt/Nexys_audio_team3/Project/Nexys_audio_team3/Nexys_audio_team3.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/PC/VUT/BPC-DE1/projekt/Nexys_audio_team3/Project/Nexys_audio_team3/Nexys_audio_team3.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/PC/VUT/BPC-DE1/projekt/Nexys_audio_team3/Project/Nexys_audio_team3/Nexys_audio_team3.sim/sim_1/behav/xsim/xsim.dir/tb_clock_enable_behav/webtalk/xsim_webtalk.tcl -notrace
+source C:/PC/VUT/BPC-DE1/projekt/Nexys_audio_team3/Project/Nexys_audio_team3/Nexys_audio_team3.sim/sim_1/behav/xsim/xsim.dir/tb_cnt_up_down_behav/webtalk/xsim_webtalk.tcl -notrace

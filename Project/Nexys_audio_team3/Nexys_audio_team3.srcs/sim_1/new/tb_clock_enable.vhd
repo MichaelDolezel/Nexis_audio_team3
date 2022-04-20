@@ -25,7 +25,7 @@ end entity tb_clock_enable;
 architecture testbench of tb_clock_enable is
 
     constant c_MAX               : natural := 2;
-    constant c_CLK_100MHZ_PERIOD : time    := 10 ns;
+    constant c_CLK_100MHZ_PERIOD : time    := 10 ns; --testbechova delka cklocku
 
     --Local signals
     signal s_clk_100MHz : std_logic;
@@ -51,7 +51,7 @@ begin
     --------------------------------------------------------
     p_clk_gen : process
     begin
-        while now < 750 ns loop -- 75 periods of 100MHz clock
+        while now < 5000 ns loop -- 75 periods of 100MHz clock
             s_clk_100MHz <= '0';
             wait for c_CLK_100MHZ_PERIOD / 2;
             s_clk_100MHz <= '1';
@@ -66,11 +66,11 @@ begin
     p_reset_gen : process
     begin
         s_reset <= '0';
-        wait for 28 ns;
+        wait for 1 ns;
         
         -- Reset activated
         s_reset <= '1';
-        wait for 153 ns;
+        wait for 0 ns;
 
         -- Reset deactivated
         s_reset <= '0';

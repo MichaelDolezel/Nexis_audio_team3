@@ -1,52 +1,63 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 07.04.2022 12:10:36
--- Design Name: 
--- Module Name: PWM - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+entity top is
+    Port ( CLK100MHZ : in STD_LOGIC;
+           SW :   in STD_LOGIC;
+           BTNC : in STD_LOGIC;
+           BTNU : in STD_LOGIC;
+           BTND : in STD_LOGIC;
+           AUD_PWM : out STD_LOGIC );
+end top;
 
-entity PWM is
-  generic (
-    pwm_bits : integer;
-    clk_cnt_len : positive := 1
-  );
-  port (
-    clk : in std_logic;
-    rst : in std_logic;
-    --duty_cycle : in unsigned(pwm_bits - 1 downto 0);
-    pwm_out : out std_logic
-  );
-end PWM;
+------------------------------------------------------------------------
+-- Architecture body for top level
+------------------------------------------------------------------------
+architecture Behavioral of top is
 
-architecture Behavioral of PWM is
+  -- Internal clock enable
+--  signal s_en  : std_logic;
+  -- Internal counter
+--  signal s_cnt : std_logic_vector(4 - 1 downto 0);
+
+
 
 begin
 
+  --------------------------------------------------------------------
+  -- Instance (copy) of clock_enable entity
+  clk_en0 : entity work.clock_enable
+--      generic map(
+--          g_MAX => 25000000
+--      )
+      port map(
+          clk   => CLK100MHZ, 
+          reset => BTNC
+--          btn_fUP => BTNU,
+--          btn_fDOWN => BTND
+--          ce_o  => s_en
+      );
 
-end Behavioral;
+  --------------------------------------------------------------------
+  -- Instance (copy) of cnt_up_down entity
+  bin_pwm0 : entity work.cnt_up_down
+--     generic map(
+--          g_CNT_WIDTH => 4
+--      )
+      port map(
+          clk       => CLK100MHZ,
+          reset     => BTNC,
+          PWM_o     => AUD_PWM
+--          en_i      => s_en,
+--          cnt_up_i  => SW,
+--          cnt_o     => s_cnt
+      );
+
+
+
+
+
+end architecture Behavioral;
