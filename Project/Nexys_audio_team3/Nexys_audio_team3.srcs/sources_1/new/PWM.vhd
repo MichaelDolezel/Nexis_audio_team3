@@ -25,6 +25,7 @@ architecture Behavioral of top is
 
 
 
+
 begin
 
   --------------------------------------------------------------------
@@ -50,7 +51,9 @@ begin
       port map(
           clk       => CLK100MHZ,
           reset     => BTNC,
-          PWM_o     => AUD_PWM
+          PWM_o     => AUD_PWM,
+          btn_fUP   => BTNU,
+          btn_fDOWN   => BTND
 --          en_i      => s_en,
 --          cnt_up_i  => SW,
 --          cnt_o     => s_cnt

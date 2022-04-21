@@ -24,8 +24,8 @@ entity cnt_up_down is
     port(
         clk       : in  std_logic;  -- Main clock
         reset     : in  std_logic;  -- on off
---        btn_fUP   : in  std_logic;  -- btn for incrementing frequency
---        btn_fDOWN : in  std_logic;  -- btn for decrementing frequency
+        btn_fUP   : in  std_logic;  -- btn for incrementing frequency
+        btn_fDOWN : in  std_logic;  -- btn for decrementing frequency
 --        en_i      : in  std_logic;  -- Enable input
 --        cnt_up_i  : in  std_logic;  -- Direction of the counter
 --        cnt_o     : out std_logic_vector(g_CNT_WIDTH - 1 downto 0);
@@ -42,10 +42,13 @@ architecture behavioral of cnt_up_down is
 --    signal s_cnt_local : unsigned(g_CNT_WIDTH - 1 downto 0);
 
     signal s_cnt_local : natural:= 0;
-    signal s_cnt_btn_loc : natural:= 0;
+    signal s_cnt_btn_locUP : natural:= 0;
+    signal s_cnt_btn_locDW : natural:= 0;
     signal s_bpwm : std_logic_vector(100 - 1 downto 0);
     signal s_freq : natural:= 0;
     signal s_ctn_pwm_loc : natural:= 0;
+    signal clk_loop : natural:= 0;
+    
 
 begin
     --------------------------------------------------------
@@ -61,28 +64,67 @@ begin
 --reset  
             if (reset = '1') then                       -- High active reset 
                 s_cnt_local <= 0;                       -- Clear local counter
-                PWM_o        <= '0';                    -- Set output to low
+                PWM_o       <= '0';                    -- Set output to low
+                s_freq      <= 1;
             end if;    
 --ON OFF
 
-----fequency up              
---            elsif (btn_fUP = '1') then
---                s_cnt_btn_loc <= s_cnt_btn_loc + 1;
---                if (s_cnt_btn_loc = 100000000) then        --local freq counter pocita do 100M pro delay 0.5s pri 100MHz clk
---                    s_freq <= s_freq + 1;                   -- increment frequency
---                    s_cnt_btn_loc <= 0;                    --reset local freq counter
---                end if;    
-----fequency down            
---            elsif (btn_fDOWN = '1') then
---                s_cnt_btn_loc <= s_cnt_btn_loc + 1;
---                if (s_cnt_btn_loc = 100000000) then        --local freq counter pocita do 100M pro delay 0.5s pri 100MHz clk
---                    s_freq <= s_freq - 1;                   -- decrement frequency
---                    s_cnt_btn_loc <= 0;                    --reset local freq counter
---                end if;
+--fequency up              
+            if (btn_fUP = '1') then
+                s_cnt_btn_locUP <= s_cnt_btn_locUP + 1;
+                if (s_cnt_btn_locUP = 50000000) then        --local freq counter pocita do 100M pro delay 0.5s pri 100MHz clk
+                    s_freq <= s_freq + 1;                   -- increment frequency
+                    s_cnt_btn_locUP <= 0;                    --reset local freq counter
+                end if;
+            else
+                s_cnt_btn_locUP <= 0;
+            end if;    
+--fequency down            
+            if (btn_fDOWN = '1') then
+                s_cnt_btn_locDW <= s_cnt_btn_locDW + 1;
+                if (s_cnt_btn_locDW = 50000000) then        --local freq counter pocita do 100M pro delay 0.5s pri 100MHz clk
+                    s_freq <= s_freq - 1;                   -- decrement frequency
+                    s_cnt_btn_locDW <= 0;                    --reset local freq counter
+                end if;
+            else
+                s_cnt_btn_locDW <= 0;
+            end if;
                 
+                
+            if   (s_freq = 1) then clk_loop <= 10000;
+            elsif(s_freq = 2) then clk_loop <= 5000;
+            elsif(s_freq = 3) then clk_loop <= 3333;
+            elsif(s_freq = 4) then clk_loop <= 2000;
+            elsif(s_freq = 5) then clk_loop <= 1250;
+            elsif(s_freq = 6) then clk_loop <= 1000;
+            elsif(s_freq = 7) then clk_loop <= 500;
+            elsif(s_freq = 8) then clk_loop <= 333;
+            elsif(s_freq = 9) then clk_loop <= 200;
+            elsif(s_freq = 10) then clk_loop <= 125;
+            elsif(s_freq = 11) then clk_loop <= 100;
+            elsif(s_freq = 12) then clk_loop <= 67;           
+            else  
+                clk_loop <= 1000;
+                s_freq <= 6;
+            end if;    
+--            case s_freq is
+--              when 1    =>  clk_loop <= 10000;
+--              when 2    =>  clk_loop <= 5000;
+--              when 3    =>  clk_loop <= 3333;
+--              when 4    =>  clk_loop <= 2000;
+--              when 5    =>  clk_loop <= 1250;
+--              when 6    =>  clk_loop <= 1000;
+--              when 7    =>  clk_loop <= 500;
+--              when 8    =>  clk_loop <= 333;
+--              when 9    =>  clk_loop <= 200;
+--              when 10   =>  clk_loop <= 125;
+--              when 11   =>  clk_loop <= 100;
+--              when 12   =>  clk_loop <= 367;
+--              when others =>  clk_loop <= 10000;
+--            end case;    
 --pwm step by step of s_bpwm    
             s_ctn_pwm_loc <= s_ctn_pwm_loc + 1;
-                if (s_ctn_pwm_loc = 1000) then
+                if (s_ctn_pwm_loc = clk_loop) then
                     if (s_cnt_local = 100) then
                         s_cnt_local <= 1;                            
                     else

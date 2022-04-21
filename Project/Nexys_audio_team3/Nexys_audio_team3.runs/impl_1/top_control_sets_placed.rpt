@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Apr 20 21:39:26 2022
+| Date         : Thu Apr 21 12:52:37 2022
 | Host         : DESKTOP-S79IPIN running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     3 |
-|    Minimum number of control sets                        |     3 |
+| Total control sets                                       |     7 |
+|    Minimum number of control sets                        |     7 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |     9 |
+| Unused register locations in slices containing registers |    14 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     3 |
+| Total control sets |     7 |
 | >= 0 to < 4        |     1 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     0 |
-| >= 16              |     2 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     5 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,24 +58,28 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | No                     |              14 |            2 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              31 |            9 |
-| Yes          | No                    | No                     |               1 |            1 |
+| No           | Yes                   | No                     |              93 |           31 |
+| Yes          | No                    | No                     |              32 |           18 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              31 |            6 |
+| Yes          | Yes                   | No                     |              31 |            9 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------+------------------------------------+------------------------------------+------------------+----------------+--------------+
-|     Clock Signal     |            Enable Signal           |          Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------------+------------------------------------+------------------------------------+------------------+----------------+--------------+
-|  CLK100MHZ_IBUF_BUFG | bin_pwm0/PWM_o_i_1_n_0             |                                    |                1 |              1 |         1.00 |
-|  CLK100MHZ_IBUF_BUFG |                                    | bin_pwm0/s_ctn_pwm_loc[30]_i_1_n_0 |                9 |             31 |         3.44 |
-|  CLK100MHZ_IBUF_BUFG | bin_pwm0/s_ctn_pwm_loc[30]_i_1_n_0 | bin_pwm0/s_cnt_local_0             |                6 |             31 |         5.17 |
-+----------------------+------------------------------------+------------------------------------+------------------+----------------+--------------+
++----------------------+------------------------------------+--------------------------------------+------------------+----------------+--------------+
+|     Clock Signal     |            Enable Signal           |           Set/Reset Signal           | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+------------------------------------+--------------------------------------+------------------+----------------+--------------+
+|  CLK100MHZ_IBUF_BUFG | bin_pwm0/PWM_o_i_1_n_0             |                                      |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG |                                    |                                      |                2 |             14 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG |                                    | bin_pwm0/p_0_in                      |               11 |             31 |         2.82 |
+|  CLK100MHZ_IBUF_BUFG |                                    | bin_pwm0/s_cnt_btn_locDW[30]_i_1_n_0 |               12 |             31 |         2.58 |
+|  CLK100MHZ_IBUF_BUFG |                                    | bin_pwm0/s_cnt_local0_carry__1_n_1   |                8 |             31 |         3.88 |
+|  CLK100MHZ_IBUF_BUFG | bin_pwm0/s_cnt_local0_carry__1_n_1 | bin_pwm0/s_cnt_local[30]_i_1_n_0     |                9 |             31 |         3.44 |
+|  CLK100MHZ_IBUF_BUFG | bin_pwm0/s_freq[30]_i_1_n_0        |                                      |               17 |             31 |         1.82 |
++----------------------+------------------------------------+--------------------------------------+------------------+----------------+--------------+
 
 
