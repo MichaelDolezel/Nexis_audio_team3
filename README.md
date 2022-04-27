@@ -33,6 +33,7 @@ A pulse-width modulated (PWM) signal is a chain of pulses at some fixed frequenc
 In our project we defined PWM as series of ones and zeroes to simulate sin wave with averadge voltage power
 
 ![PWM_sin](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/cdd420cd77fd5c92d149b2df3138ece0ead66427/Images/PWMsin.gif)
+![PWM](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/530bbdf4d08f2d4a06117ef1224f8c023a193075/Images/pwm.png)
  
  This how we defined PWM sin signal in our code
  ```
