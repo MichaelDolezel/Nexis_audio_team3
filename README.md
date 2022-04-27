@@ -33,10 +33,19 @@ A pulse-width modulated (PWM) signal is a chain of pulses at some fixed frequenc
 In our project we defined PWM as series of ones and zeroes to simulate sin wave with averadge voltage power
 
 ![PWM_sin](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/cdd420cd77fd5c92d149b2df3138ece0ead66427/Images/PWMsin.gif)
-
-
+ 
+ This how we defined PWM sin signal in our code
+ ```
+ s_bpwm <= "1111110000111111111111111111100111111110011111100001111000000110000000110000000001100000000111100000";
+ ```
+This signal is sended to mono audio output
 
 ### Mono audio output
+The on-board audio jack is driven by a Sallen-Key Butterworth Low-pass 4th Order Filter that provides mono audio output. The circuit of the low-pass filter is shown in lower Figure. A digital input is in our case pulse-width modulated (PWM) open-drain signal produced by the FPGA. The signal needs to be driven low for logic ‘0’ and left in high-impedance for logic ‘1’.
+
+![audio_output](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/ad62c287599a18863b616133deb6df3945e61855/Images/audio_out.png)
+
+from our PWM output we sending digital signal to AUD_PWM and then sound of specified frequenci is created 
 
 <a name="modules"></a>
 
