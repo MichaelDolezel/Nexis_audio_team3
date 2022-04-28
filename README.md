@@ -171,6 +171,3 @@ This is link to our presentation [Presentation](https://www.youtube.com/watch?v=
 ## References
 
 1. We gathered some info about Nexis modules from this reference manual [Nexys A7 Reference Manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual)
-2. odkaz 2 [] ()
-3. odkaz 3 [] ()
-4. odkaz 4 [] ()
