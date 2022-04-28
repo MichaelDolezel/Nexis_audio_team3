@@ -41,6 +41,9 @@ In our project we defined PWM as series of ones and zeroes to simulate sin wave 
  s_bpwm <= "1111110000111111111111111111100111111110011111100001111000000110000000110000000001100000000111100000";
  ```
 This signal is sended to mono audio output
+![PWM_RUN](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/d698a5aaf73def34203ece4286601769a9bacf8b/Images/PWM_run.png)
+
+
 
 ### Mono audio output
 The on-board audio jack is driven by a Sallen-Key Butterworth Low-pass 4th Order Filter that provides mono audio output. The circuit of the low-pass filter is shown in lower Figure. A digital input is in our case pulse-width modulated (PWM) open-drain signal produced by the FPGA. The signal needs to be driven low for logic ‘0’ and left in high-impedance for logic ‘1’.
@@ -52,10 +55,11 @@ from our PWM output we sending digital signal to AUD_PWM and then sound of speci
 <a name="modules"></a>
 
 ## VHDL modules description and simulations
-
-Write your text here.
-
 <a name="top"></a>
+
+### VHDL SCHEME
+![audio_output](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/d698a5aaf73def34203ece4286601769a9bacf8b/Images/Scheme.png)
+
 
 ## TOP module description and simulations
 
