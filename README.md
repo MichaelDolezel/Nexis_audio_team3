@@ -125,7 +125,7 @@ On the left is number from the table below and on the right part is a frequency
 ![7segm_1500Hz](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/1f049542906e1784e22b6be0b1a1250f6f9281da/Images/7segm_15000Hz.jpg)
  
  
-| **number on 7seg** | **frequency [Hz]** |**periode [s]** | 
+| **number on 7seg** | **frequency [Hz]** |**period [s]** | 
 | :-: | :-: | :-: |
 | 1 | 100 | 0,01 |
 | 2 | 200 | 0,005 |
