@@ -63,7 +63,7 @@ The on-board audio jack is driven by a Sallen-Key Butterworth Low-pass 4th Order
 
 ![audio_output](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/ad62c287599a18863b616133deb6df3945e61855/Images/audio_out.png)
 
-from our PWM output we sending digital signal to AUD_PWM and then sound of specified frequenci is created 
+from our PWM output we sending digital signal to AUD_PWM and then sound of specified frequency is created 
 
 <a name="modules"></a>
 
@@ -76,7 +76,6 @@ from our PWM output we sending digital signal to AUD_PWM and then sound of speci
 
 ### Clock enable
 
-dwdawdawdawdawda
 
 ![Clock enable](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/main/Images/clock_enable1.png)
 
@@ -86,7 +85,6 @@ dwdawdawdawdawda
  
 ### Counter up down
 
-awdawdawdawdawd 
 
 ![Counter up down](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/main/Images/cnt_up_down1.png)
 
@@ -96,7 +94,6 @@ awdawdawdawdawd
 
 ### PWM
 
-wdawdasegrftjtzj
 
 ![PWM](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/main/Images/PWM1.png)
 
@@ -112,7 +109,7 @@ wdawdasegrftjtzj
 --reset  
             if (reset = '1') then                       -- High active reset 
                 cnt_local <= 0; -- Clear all bits
-                PWM_o       <= '0';                    -- Set output to low
+                PWM_o       <= '0';                    -- Set output to zero
             end if; 
 --            
             if   (freq_step_i = "0001") then clk_loop <= 10000; f_disp_o <= 100;            
@@ -195,26 +192,7 @@ On the left is number from the table below and on the right part is a frequency
 | a | 10000 | 0,0001 |
 | b | 15000 | 0,000066 |
 
- 
- 
- 
- ```
-important code;
- 
- ```
- 
- 
- 
- 
 
- 
- 
- 
- 
- 
- 
- 
- 
 
 <a name="Presentation"></a>
 ## Presentation video  
@@ -225,15 +203,7 @@ This is link to our presentation [Presentation](https://www.youtube.com/watch?v=
  
 ## Conclusion
  
- 
- erfqawefawsefwefwsergwergergergr
- fgergerg
- erg
- erg
- erg
- ergerg
- edrger
- gerg
+We managed to generate sound and change frequency in real time with switches, we also managed to display the choosen frequency in 8 digit display. Unfortunetly incrementing frequency when freq_step_i 4th bit is changing from 0 to 1 sound stops for 20 sec, after reset sound also stops for 20 seconds.
  
  
 <a name="references"></a>
@@ -241,3 +211,10 @@ This is link to our presentation [Presentation](https://www.youtube.com/watch?v=
 ## References
 
 1. We gathered some info about Nexis modules from this reference manual [Nexys A7 Reference Manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual)
+ 
+2. Inspiration about PWM wave form [PWM](https://vhdlwhiz.com/pwm-controller/)
+ 
+3. We modified and used principles from lab6 and lab7 [counter](https://github.com/tomas-fryza/digital-electronics-1/tree/master/labs/06-counter)
+ [display driver](https://github.com/tomas-fryza/digital-electronics-1/tree/master/labs/07-display_driver)
+ 
+ 
