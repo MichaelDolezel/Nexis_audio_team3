@@ -63,7 +63,7 @@ from our PWM output we sending digital signal to AUD_PWM and then sound of speci
 *click for higher quality*
 
 ### Clock enable
-![Clock enable]()
+![Clock enable](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/bd8b3f53d76be3a4d1693efeadb40d7b3a84344a/Images/Clock_enable.png)
 
 ```
 important code;
@@ -71,7 +71,7 @@ important code;
  
  
 ### Counter up down
-![Counter up down]()
+![Counter up down](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/bd8b3f53d76be3a4d1693efeadb40d7b3a84344a/Images/counter%20up%20down.png)
 
 ```
 important code;
@@ -79,7 +79,7 @@ important code;
 
 
 ### PWM
-![PWM]()
+![PWM](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/bd8b3f53d76be3a4d1693efeadb40d7b3a84344a/Images/PWM_module.png)
 
 ```
 important code;
