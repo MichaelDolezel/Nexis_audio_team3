@@ -2,9 +2,9 @@
 
 ### Team members
 
-* Michael Doležel (responsible for Read me and presentation)
-* Josepe Komár (responsible programming support consutant)
-* Jan Gross (responsible main superior senior daddy programmer)
+* Michael Doležel (Rsponsible for Read me and presentation)
+* Josepe Komár (Responsible secondary programming)
+* Jan Gross (Responsible main programmer)
 
 ### Table of contents
 
