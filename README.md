@@ -3,7 +3,7 @@
 ### Team members
 
 * Michael Doležel (Reponsible for Read me and presentation)
-* Josepe Komár (Responsible secondary programming)
+* Josepe Komár (Responsible programing display and assistence)
 * Jan Gross (Responsible main programmer)
 
 ### Table of contents
@@ -71,46 +71,77 @@ from our PWM output we sending digital signal to AUD_PWM and then sound of speci
 <a name="top"></a>
 
 ### VHDL SCHEME
-![audio_output](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/d698a5aaf73def34203ece4286601769a9bacf8b/Images/Scheme.png)
+![audio_output](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/main/Images/schematic1.png)
 *click for higher quality*
 
 ### Clock enable
 
 dwdawdawdawdawda
 
-![Clock enable](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/bd8b3f53d76be3a4d1693efeadb40d7b3a84344a/Images/Clock_enable.png)
+![Clock enable](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/main/Images/clock_enable1.png)
 
 ![tb_clock_enable](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/58db1edd96f7bf318f3bdf637d427c6af9df9508/Images/tb_clock_enable%20.png)
 
-```
-important code;
- ```
  
  
 ### Counter up down
 
 awdawdawdawdawd 
 
-![Counter up down](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/bd8b3f53d76be3a4d1693efeadb40d7b3a84344a/Images/counter%20up%20down.png)
+![Counter up down](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/main/Images/cnt_up_down1.png)
 
 ![tb_cnt_up_down](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/58db1edd96f7bf318f3bdf637d427c6af9df9508/Images/tb_cnt_up_down.png)
 
-```
-important code;
- ```
 
 
 ### PWM
 
 wdawdasegrftjtzj
 
-![PWM](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/bd8b3f53d76be3a4d1693efeadb40d7b3a84344a/Images/PWM_module.png)
+![PWM](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/main/Images/PWM1.png)
 
 ![PWM_RUN](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/d698a5aaf73def34203ece4286601769a9bacf8b/Images/PWM_run.png)
 
 
 ```
-important code;
+   s_bpwm <= "0000011000000111100001111110001111111100111111111111111111110011111111000111111000011110000001100000";
+
+    p_cnt_up_down : process(clk)
+    begin                
+        if rising_edge(clk) then    -- Synchronous process
+--reset  
+            if (reset = '1') then                       -- High active reset 
+                cnt_local <= 0; -- Clear all bits
+                PWM_o       <= '0';                    -- Set output to low
+            end if; 
+--            
+            if   (freq_step_i = "0001") then clk_loop <= 10000; f_disp_o <= 100;            
+            elsif(freq_step_i = "0010") then clk_loop <= 5000;  f_disp_o <= 200;
+            elsif(freq_step_i = "0011") then clk_loop <= 3333;  f_disp_o <= 300;
+            elsif(freq_step_i = "0100") then clk_loop <= 2000;  f_disp_o <= 500;
+            elsif(freq_step_i = "0101") then clk_loop <= 1250;  f_disp_o <= 800;
+            elsif(freq_step_i = "0110") then clk_loop <= 1000;  f_disp_o <= 1000;
+            elsif(freq_step_i = "0111") then clk_loop <= 500;   f_disp_o <= 2000;
+            elsif(freq_step_i = "1000") then clk_loop <= 200;   f_disp_o <= 5000;
+            elsif(freq_step_i = "1001") then clk_loop <= 125;   f_disp_o <= 8000;
+            elsif(freq_step_i = "1010") then clk_loop <= 100;   f_disp_o <= 10000;
+            elsif(freq_step_i = "1011") then clk_loop <= 67;    f_disp_o <= 15000;       
+            else  
+                clk_loop <= 1000; f_disp_o <= 1000;
+            end if;    
+--   
+            ctn_pwm_loc <= ctn_pwm_loc + 1;             --frequency when to play 100 bits
+                if (ctn_pwm_loc = clk_loop) then
+                    if (cnt_local = 100) then
+                        cnt_local <= 1;                            
+                    else
+                        PWM_o <=  s_bpwm(cnt_local);    --reads bits one after another
+                        cnt_local <= cnt_local + 1;     --increment every loop                                  
+                    end if;
+                    ctn_pwm_loc <= 0;
+                end if;
+        end if;
+    end process p_cnt_up_down;
  ```
 
 ### Seven segment display
