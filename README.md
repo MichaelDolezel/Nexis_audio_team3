@@ -3,8 +3,8 @@
 ### Team members
 
 * Michael Doležel (Reponsible for Read me and presentation)
-* Josepe Komár (Responsible programing display and assistence)
-* Jan Gross (Responsible main programmer)
+* Josef Komár (Responsible programing display and assistence)
+* Jan Gross (Responsible for PWM programme and display assistence)
 
 ### Table of contents
 
