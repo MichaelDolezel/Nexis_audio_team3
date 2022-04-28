@@ -32,6 +32,8 @@ Nexys board mono audio output and PWM sound generation. Generate basic signals a
 
 ## Hardware description
 
+![NEXIS](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/55c8a85e83d038743d6e73572ef6b09657bc0c3a/Images/NEXIS.webp)
+
 We used Nexys A7-50T board which is a ready-to-use digital circuit development platform designed to bring additional industry applications into the classroom environment. The Artix-7 FPGA is optimized for high-performance logic and offers more capacity, higher performance, and more resources than earlier designs. With its large, high-capacity FPGA and collection of USB, Ethernet, and other ports, the Nexys A7 can host designs ranging from introductory combinational circuits to powerful embedded processors. Several built-in peripherals, including an accelerometer, a temperature sensor, MEMs digital microphone, speaker amplifier, and plenty of I/O devices allow the Nexys A7 to be used for a wide range of designs without needing any other components.
 
 For our audio output, we used a PWM module and Mono audio output inside of Nexys A7-50T
@@ -40,6 +42,7 @@ For our audio output, we used a PWM module and Mono audio output inside of Nexys
 A pulse-width-modulated (PWM) signal is a chain of pulses at some fixed frequency, with each pulse potentially having a different width. In our project, we defined PWM as a series of ones and zeroes to simulate sin wave with average voltage power
 
 ![PWM_sin](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/cdd420cd77fd5c92d149b2df3138ece0ead66427/Images/PWMsin.gif)
+
 ![PWM](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/530bbdf4d08f2d4a06117ef1224f8c023a193075/Images/pwm.png)
  
  This how we defined PWM sin signal in our code
@@ -77,6 +80,8 @@ dwdawdawdawdawda
 
 ![Clock enable](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/bd8b3f53d76be3a4d1693efeadb40d7b3a84344a/Images/Clock_enable.png)
 
+![tb_clock_enable](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/58db1edd96f7bf318f3bdf637d427c6af9df9508/Images/tb_clock_enable%20.png)
+
 ```
 important code;
  ```
@@ -87,6 +92,8 @@ important code;
 awdawdawdawdawd 
 
 ![Counter up down](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/bd8b3f53d76be3a4d1693efeadb40d7b3a84344a/Images/counter%20up%20down.png)
+
+![tb_cnt_up_down](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/58db1edd96f7bf318f3bdf637d427c6af9df9508/Images/tb_cnt_up_down.png)
 
 ```
 important code;
