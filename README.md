@@ -37,10 +37,12 @@ In our project we defined PWM as series of ones and zeroes to simulate sin wave 
  
  This how we defined PWM sin signal in our code
  ```
- s_bpwm <= "1111110000111111111111111111100111111110011111100001111000000110000000110000000001100000000111100000";
+ s_bpwm <= "0000011000000111100001111110001111111100111111111111111111110011111111000111111000011110000001100000";
  ```
 This signal is sended to mono audio output
 ![PWM_RUN](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/d698a5aaf73def34203ece4286601769a9bacf8b/Images/PWM_run.png)
+*click for higher quality*
+
 
 
 
@@ -58,13 +60,51 @@ from our PWM output we sending digital signal to AUD_PWM and then sound of speci
 
 ### VHDL SCHEME
 ![audio_output](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/d698a5aaf73def34203ece4286601769a9bacf8b/Images/Scheme.png)
+*click for higher quality*
+
+### Clock enable
+![Clock enable]()
+
+```
+important code;
+ ```
+ 
+ 
+### Counter up down
+![Counter up down]()
+
+```
+important code;
+ ```
+
+
+### PWM
+![PWM]()
+
+```
+important code;
+ ```
 
 
 ## TOP module description and simulations
+Top module 
+![Top module]()
 
-Write your text here.
+```
+important code 1;
+ ```
+ 
+ 
+```
+important code 2;
+ ```
+ 
+ ```
+important code 3;
+ ```
 
-<a name="video"></a>
+
+
 
 ## Presentation video
 
