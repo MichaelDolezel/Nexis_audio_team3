@@ -106,6 +106,9 @@ wdawdasegrftjtzj
 
 ![PWM](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/bd8b3f53d76be3a4d1693efeadb40d7b3a84344a/Images/PWM_module.png)
 
+![PWM_RUN](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/d698a5aaf73def34203ece4286601769a9bacf8b/Images/PWM_run.png)
+
+
 ```
 important code;
  ```
