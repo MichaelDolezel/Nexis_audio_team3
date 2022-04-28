@@ -51,7 +51,7 @@ This signal is sended to mono audio output
 *click for higher quality*
 
 
-This is our PWM to SIN wave from oscilloscope
+This is our PWM to SIN wave measured by oscilloscope
 ![PWM_RUN](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/cd30675920f1173972ab62ab81257ebf6e5db358/Images/SIN_osc.png)
 
 
