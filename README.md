@@ -20,6 +20,11 @@
 ## Project objectives
 
 Nexys board mono audio output and PWM sound generation. Generate basic signals and/or audio samples.
+- [x] Programm PWM 
+- [x] Send PWM signal to nexis mono audio output 
+- [x] Play frequency from audio output 
+- [X] Use switches to change frequency
+- [X] Use display to show which frequency is is played
 
 <a name="hardware"></a>
 
@@ -106,7 +111,7 @@ important code 3;
 
 
 
-## Presentation video
+## Presentation video  
 
 <a name="Presentation"></a>
 
@@ -115,3 +120,6 @@ This is link to our presentation [Presentation](https://www.youtube.com/watch?v=
 ## References
 
 1. We gathered some info about Nexis modules from this reference manual [Nexys A7 Reference Manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual)
+2. odkaz 2 [] ()
+3. odkaz 3 [] ()
+4. odkaz 4 [] ()
