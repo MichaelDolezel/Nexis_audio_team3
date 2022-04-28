@@ -113,6 +113,11 @@ wdawdasegrftjtzj
 important code;
  ```
 
+### Seven segment display
+
+![8-digit driver testbench for 7seg](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/12781211ea2ced8741e33b7a120736073e1b5053/Images/8-digit%20driver%20testbench%20for%207seg%20.png)
+
+![8digit addon](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/12781211ea2ced8741e33b7a120736073e1b5053/Images/8digit%20addon.png)
 
 ## TOP module description and simulations
 Top module 
