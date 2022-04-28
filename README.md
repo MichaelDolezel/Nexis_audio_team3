@@ -13,7 +13,6 @@
 * [VHDL modules description and simulations](#modules)
 * [TOP module description and simulations](#top)
 * [Presentation](#Presentation)
-* [Video](#video)
 * [References](#references)
 
 <a name="objectives"></a>
@@ -67,18 +66,12 @@ Write your text here.
 
 <a name="video"></a>
 
-## Presentation
+## Presentation video
 
 <a name="Presentation"></a>
 
-This is link to our presentation [Presentation](https://docs.google.com/presentation/d/1VLHdkLyKi4IlkQxZZnHYGYOOpS9zS99a/edit?usp=sharing&ouid=101564358016980586002&rtpof=true&sd=true)
-
-## Video
-
-Write your text here
-
-<a name="references"></a>
+This is link to our presentation [Presentation](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## References
 
-1. Write your text here.
+1. We gathered some info about Nexis modules from this reference manual [Nexys A7 Reference Manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual)
