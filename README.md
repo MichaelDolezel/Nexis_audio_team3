@@ -12,6 +12,7 @@
 * [Hardware description](#hardware)
 * [VHDL modules description and simulations](#modules)
 * [TOP module description and simulations](#top)
+* [Seven segment display](#7seg)
 * [Presentation](#Presentation)
 * [References](#references)
 
@@ -93,7 +94,7 @@ important code;
 
 ## TOP module description and simulations
 Top module 
-![Top module]()
+![Top module] ()
 
 ```
 important code 1;
@@ -107,15 +108,56 @@ important code 2;
  ```
 important code 3;
  ```
+ 
+ ## Seven segment display
+<a name="7seg">
+ ![Top module]()
+ 
+ qwnddbniadnawidnawidndi
+ 
+ 
+| **number on 7seg** | **frequency [Hz]** |**periode [s]** | 
+| :-: | :-: | :-: |
+| 1 | 100 | 0,01 |
+| 2 | 200 | 0,005 |
+| 3 | 300 | 0,0033 |
+| 4 | 500 | 0,002 |
+| 5 | 800 | 0,00125 |
+| 6 | 1000 | 0,001 |
+| 7 | 2000 | 0,0005 |
+| 8 | 5000 | 0,0002 | 
+| 9 | 8000 | 0,000125 |
+| 10| 10000 | 0,0001 |
+| 11| 15000 | 0,000066 |
 
+ 
+ 
+ 
+ ```
+important code;
+ 
+ ```
+ 
+ 
+ 
+ 
 
-
-
-## Presentation video  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 <a name="Presentation"></a>
+## Presentation video  
 
 This is link to our presentation [Presentation](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
+
+<a name="references"></a>
 
 ## References
 
