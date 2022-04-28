@@ -113,9 +113,16 @@ important code 3;
  
  ## Seven segment display
 <a name="7seg">
- ![Top module]()
  
- qwnddbniadnawidnawidndi
+On the left is number from the table below and on the right part is a frequency
+ 
+ ###### For 100Hz
+ 
+![7segm_100Hz](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/f28a9680544e8c146b08051935da4f34bbadbde0/Images/7segm_100Hz.jpg)
+ 
+ ###### For 15000 Hz
+ 
+![7segm_1500Hz](https://github.com/MichaelDolezel/Nexys_audio_team3/blob/1f049542906e1784e22b6be0b1a1250f6f9281da/Images/7segm_15000Hz.jpg)
  
  
 | **number on 7seg** | **frequency [Hz]** |**periode [s]** | 
@@ -129,8 +136,8 @@ important code 3;
 | 7 | 2000 | 0,0005 |
 | 8 | 5000 | 0,0002 | 
 | 9 | 8000 | 0,000125 |
-| 10| 10000 | 0,0001 |
-| 11| 15000 | 0,000066 |
+| a | 10000 | 0,0001 |
+| b | 15000 | 0,000066 |
 
  
  
