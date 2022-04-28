@@ -2,7 +2,7 @@
 
 ### Team members
 
-* Michael Doležel (Rsponsible for Read me and presentation)
+* Michael Doležel (Reponsible for Read me and presentation)
 * Josepe Komár (Responsible secondary programming)
 * Jan Gross (Responsible main programmer)
 
